@@ -1,0 +1,6 @@
+*~
+*.elc
+auto-save-list
+elpa
+custom.el
+.DS_Store
