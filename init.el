@@ -14,7 +14,12 @@
 
 (load-theme 'sanityinc-tomorrow-night t)
 
-(menu-bar-mode (if (eq system-type 'darwin) 1 -1))
+(menu-bar-mode (if (and
+		    (eq system-type 'darwin)
+		    (display-graphic-p))
+		   1
+		 -1))
+
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
 
