@@ -10,7 +10,10 @@
 
 (require 'my-packages)
 
-;;ui stuff
+(require 'exec-path-from-shell)
+(exec-path-from-shell-initialize)
+
+;; ui stuff
 
 (load-theme 'sanityinc-tomorrow-night t)
 
@@ -27,4 +30,25 @@
 
 (setq inhibit-startup-screen t)
 
-(set-default-font "Inconsolata-dz 10")
+(set-default-font "InconsolataDZ 10")
+
+;; keys
+
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier 'super)
+(setq mac-control-modifier 'control)
+
+(define-key global-map (kbd "M-<up>") 'beginning-of-buffer)
+(define-key global-map (kbd "M-<down>") 'end-of-buffer)
+(define-key global-map (kbd "M-<left>") 'move-beginning-of-line)
+(define-key global-map (kbd "M-<right>") 'move-end-of-line)
+
+(define-key global-map (kbd "s-<up>") 'backward-paragraph)
+(define-key global-map (kbd "s-<down>") 'forward-paragraph)
+(define-key global-map (kbd "s-<left>") 'backward-word)
+(define-key global-map (kbd "s-<right>") 'forward-word)
+
+(define-key global-map (kbd "M-s-<left>") 'beginning-of-defun)
+(define-key global-map (kbd "M-s-<right>") 'end-of-defun)
+(define-key global-map (kbd "M-s-<down>") 'scroll-down)
+(define-key global-map (kbd "M-s-<up>") 'scroll-up)

@@ -10,7 +10,9 @@
 (defvar my-theme-packages
   '(zenburn-theme
     solarized-theme
-    color-theme-sanityinc-tomorrow))
+    color-theme-sanityinc-tomorrow
+    cider
+    exec-path-from-shell))
 
 (defun install-packages (list-of-packages)
   (unless (every #'package-installed-p list-of-packages)
